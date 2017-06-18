@@ -7,23 +7,25 @@ to submit all materials following the procedures described on the
 submission procedures page.
 
 Name:  
+	Dan Gilmour
 
 Lecture section:  
+	MW 2:30 - 4:15
 
 Recitation day and time:  
+	W  1:30 - 2:15
 
 Assignment #:  
+	Project 1
 
 Program due date:  
+	June 18, 2017
 
 Handed in date:  
+	June 18, 2018
 
 Source code file name(s):
-
-
-
-
-
+	battleship.html
 
 
 Other file name(s) (if relevant):
@@ -35,6 +37,7 @@ Other file name(s) (if relevant):
 
 
 Does your project run without error?:
+	Yes
 
 If not, what is/are the error(s) and which parts of your program run
 correctly?:
