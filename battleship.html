@@ -83,11 +83,11 @@
 		/** Ship Methods **/	
 
 		function makeLocations(startLoc, endLoc) {
-			var colStart = startLoc.charCodeAt(0) - 65;
-			var colEnd   = endLoc.charCodeAt(0) - 65;
+			var rowStart = startLoc.charCodeAt(0) - 65;
+			var rowEnd   = endLoc.charCodeAt(0) - 65;
 
-			var rowStart = startLoc.charCodeAt(1) - 49;
-			var rowEnd   = endLoc.charCodeAt(1) - 49;
+			var colStart = startLoc.charCodeAt(1) - 49;
+			var colEnd   = endLoc.charCodeAt(1) - 49;
 
 			if (rowStart == rowEnd) {
 				var rowDir = 0;
@@ -234,8 +234,24 @@
 				document.getElementById("body").removeChild(document.getElementById("body").lastChild);
 			}
 			var table = document.getElementById("upper");
+
+			var header = document.createElement("tr");
+			var el = document.createElement("td");
+			el.innerHTML = " ";
+			header.append(el);
+			for (var i = 0; i < 10; i++) {
+				var element = document.createElement("td");
+				element.innerHTML = String.fromCharCode(i + 65);
+				header.append(element);
+			}
+			table.append(header);
 			for (var i = 0; i < 10; i++) {
 				var givenRow = document.createElement("tr");
+				var el = document.createElement("td");
+				el.style.minWidth = "20px";
+				el.height = "20";
+				el.innerHTML = (i + 1).toString();
+				givenRow.append(el);
 				for (var j = 0; j < 10; j++) {
 					var element = document.createElement("td"); 
 					element.style.minWidth = "20px";
@@ -268,8 +284,24 @@
 
 		function generateBottom(player, opponent) {
 			var table = document.getElementById("lower");
+
+			var header = document.createElement("tr");
+			var el = document.createElement("td");
+			el.innerHTML = " ";
+			header.append(el);
+			for (var i = 0; i < 10; i++) {
+				var element = document.createElement("td");
+				element.innerHTML = String.fromCharCode(i + 65);
+				header.append(element);
+			}
+			table.append(header);
 			for (var i = 0; i < 10; i++) {
 				var givenRow = document.createElement("tr");
+				var el = document.createElement("td");
+				el.style.minWidth = "20px";
+				el.height = "20";
+				el.innerHTML = (i + 1).toString();
+				givenRow.append(el);
 				for (var j = 0; j < 10; j++) {
 					var element = document.createElement("td"); 
 					element.style.minWidth = "20px";
